@@ -8,13 +8,11 @@ after  = input('Erstatt: ')
 
 os.chdir(folder)
 for file in glob.glob("*.ifc"):
-    filename = file
-
-    f = open(filename, "r")
+    f = open(file, "r")
     text = f.read()
     text = text.replace(before, after)
 
-    f = open(filename, "w")
+    f = open(file, "w")
     f.write(text)
     f.close()
 
